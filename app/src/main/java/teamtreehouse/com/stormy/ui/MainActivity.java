@@ -185,7 +185,7 @@ public class MainActivity extends ActionBarActivity {
 
             day.setSummary(jsonDay.getString("summary"));
             day.setIcon(jsonDay.getString("icon"));
-            day.setTemperatureMax(jsonDay.getDouble("temeratureMax"));
+            day.setTemperatureMax(jsonDay.getDouble("temperatureMax"));
             day.setTime(jsonDay.getLong("time"));
             day.setTimezone(timezone);
 
