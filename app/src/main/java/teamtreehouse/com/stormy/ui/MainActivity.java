@@ -264,6 +264,8 @@ public class MainActivity extends ActionBarActivity {
     @OnClick(R.id.dailyButton)
     public void startDailyActivity(View view) {
         Intent intent = new Intent(this, DailyForecastActivity.class);
+        // send data to DailyForecastActivity
+        // DAILY_FORECAST is the key while getDailyForecast is the value
         intent.putExtra(DAILY_FORECAST, mForecast.getDailyForecast());
         startActivity(intent);
     }

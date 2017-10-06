@@ -3,10 +3,10 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="40dp"
+                android:paddingBottom="20dp"
                 android:paddingLeft="64dp"
                 android:paddingRight="32dp"
-                android:paddingTop="40dp"
+                android:paddingTop="20dp"
                 tools:background="#ffaa00">
 
     <ImageView

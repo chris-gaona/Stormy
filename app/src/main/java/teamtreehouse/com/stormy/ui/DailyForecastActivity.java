@@ -22,7 +22,10 @@ public class DailyForecastActivity extends ListActivity {
         setContentView(R.layout.activity_daily_forecast);
 
         Intent intent = getIntent();
+        // gets arguments passed from MainActivity
+        // DAILY_FORECAST is the key to access the data passed from MainActivity
         Parcelable[] parcelables = intent.getParcelableArrayExtra(MainActivity.DAILY_FORECAST);
+        // converting/copying the Parcelable array type to a usable Day array type
         mDays = Arrays.copyOf(parcelables, parcelables.length, Day[].class);
 
         DayAdapter adapter = new DayAdapter(this, mDays);
