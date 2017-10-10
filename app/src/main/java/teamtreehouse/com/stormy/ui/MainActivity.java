@@ -40,6 +40,7 @@ public class MainActivity extends ActionBarActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final String DAILY_FORECAST = "DAILY_FORECAST";
+    public static final String HOURLY_FORECAST = "HOURLY_FORECAST";
 
     private Forecast mForecast;
 
@@ -263,10 +264,22 @@ public class MainActivity extends ActionBarActivity {
 
     @OnClick(R.id.dailyButton)
     public void startDailyActivity(View view) {
+        // creates new intent for daily forecast activity
         Intent intent = new Intent(this, DailyForecastActivity.class);
         // send data to DailyForecastActivity
         // DAILY_FORECAST is the key while getDailyForecast is the value
         intent.putExtra(DAILY_FORECAST, mForecast.getDailyForecast());
+        // starts the activity
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.hourlyButton)
+    public void startHourlyActivity(View view) {
+        // creates new intent for our hourly forecast activity
+        Intent intent = new Intent(this, HourlyForecastActivity.class);
+        // passes in required data to new activity
+        intent.putExtra(HOURLY_FORECAST, mForecast.getHourlyForecast());
+        // starts the activity
         startActivity(intent);
     }
 }
