@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import teamtreehouse.com.stormy.R;
+import teamtreehouse.com.stormy.weather.Hour;
 
 /**
  * Created by chrisgaona on 10/11/17.
@@ -43,6 +44,13 @@ public class HourAdapter extends RecyclerView.Adapter<HourAdapter.HourViewHolder
             mSummaryLabel = (TextView) itemView.findViewById(R.id.summaryLabel);
             mTemperatureLabel = (TextView) itemView.findViewById(R.id.temperatureLabel);
             mIconImageView = (ImageView) itemView.findViewById(R.id.iconImageView);
+        }
+
+        public void bindHour(Hour hour) {
+            mTimeLabel.setText(hour.getHour());
+            mSummaryLabel.setText(hour.getSummary());
+            mTemperatureLabel.setText(hour.getTemperature() + "");
+            mIconImageView.setImageResource(hour.getIconId());
         }
     }
 }
