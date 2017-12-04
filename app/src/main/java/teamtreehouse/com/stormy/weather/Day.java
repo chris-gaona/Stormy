@@ -83,7 +83,7 @@ public class Day implements Parcelable {
         parcel.writeString(mTimezone);
     }
 
-    protected Day(Parcel in) {
+    private Day(Parcel in) {
         mTime = in.readLong();
         mSummary = in.readString();
         mTemperatureMax = in.readDouble();
